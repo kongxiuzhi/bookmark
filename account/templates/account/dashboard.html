@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<p>Welcome to your dashboard.</p>
+<div id="action-list">
+
+		{% for action in actions %}
+			{% include "actions/action/detail.html" %}
+		{% empty %}
+			Nothing happen
+		{% endfor %}
+</div>
+{% endblock %}
